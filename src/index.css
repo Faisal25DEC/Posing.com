@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+div {
+  margin: 0;
+}
+.hero-bg {
+  background-image: url("./assets/hero_bg.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+.inventory-wrapper {
+  background-image: url("./assets/feature_bg.svg");
+}
+.inventory-text {
+  -webkit-text-stroke: 1px #52c8c4;
+  font-size: 60px;
+  color: transparent;
+  opacity: 0.5;
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+.card {
+  cursor: pointer;
+}
+.card-icon {
+  transition: all 0.8s ease;
+}
+
+.card:hover .inventory-text {
+  opacity: 0.8;
+}
+
+.card:hover .card-icon {
+  scale: 0.94;
+}
+
+.card:hover .card-icon::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: "";
+  z-index: -1;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(0.93);
+  -moz-transform: scale(0.93);
+  -ms-transform: scale(0.93);
+  transform: scale(0.93);
+  -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+  -moz-animation: sonarEffect 0.2s ease-out 75ms;
+  animation: sonarEffect 0.7s ease-out 75ms;
+}
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 20;
+  }
+  40% {
+    opacity: 50;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff,
+      0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff,
+      0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.4);
+    opacity: 100;
+  }
+}
+@-moz-keyframes sonarEffect {
+  0% {
+    opacity: 20;
+  }
+  40% {
+    opacity: 50;
+    box-shadow: 0 0 0 2px rgba(227, 226, 226, 0.1), 0 0 10px 10px #fff,
+      0 0 0 10px rgba(237, 237, 237, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(237, 237, 237, 0.1), 0 0 10px 10px #fff,
+      0 0 0 10px rgba(239, 239, 239, 0.5);
+    -moz-transform: scale(1.4);
+    opacity: 100;
+  }
+}
+@keyframes sonarEffect {
+  0% {
+    opacity: 20;
+  }
+  40% {
+    opacity: 50;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ffffff,
+      0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #e8e8e8,
+      0 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.4);
+    opacity: 100;
+  }
+}
+
+textarea:focus {
+  border: 1px solid #6990ff !important;
+  outline: #6990ff !important;
+}
+
+input:focus {
+  /* border: 0.25px solid #6990ff !important; */
+  outline: #6990ff !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0px !important;
+  top: 85% !important;
+  left: 0;
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  transition: all 0.4s ease !important;
+  height: 9px !important;
+}
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+  border-radius: 10px !important;
+  transition: all 0.4s ease;
+}
+.pos-heading {
+  transition: color 0.4s ease;
+}
+.pos-heading:hover {
+  cursor: pointer;
+  color: #6990ff;
+}
+
+.pos-image {
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.pos-image:hover {
+  transform: scale(1.1);
+}
+.pos-readmore {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  cursor: pointer;
+}
+
+.pos-readmore:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.pos-readmore:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.nav-items {
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+  transition: transform 0.5s ease-in-out;
+}
+.nav-items-shrink {
+  animation: shrink 500ms ease-in-out backwards;
+  transform-origin: top center;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.card-style {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-style {
+    width: 45%;
+  }
+}
