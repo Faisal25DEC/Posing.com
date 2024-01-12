@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About";
+import Carousel from "./components/Carousel";
 import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import FAQs from "./components/FAQs";
@@ -30,7 +31,9 @@ function App() {
       <Clients />
       <Testimonials />
       <PointOfSale />
+      <Carousel />
       <Contact />
+
       <Footer />
     </div>
   );

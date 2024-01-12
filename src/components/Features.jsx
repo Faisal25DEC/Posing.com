@@ -15,6 +15,8 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import { textPrimary } from "../assets/constants";
+import { motion } from "framer-motion";
+import { textVariant } from "../utils/framer.utils";
 const Features = () => {
   const featureCards = [
     {
@@ -57,9 +59,15 @@ const Features = () => {
         gap="50px"
       >
         <Flex flexDir={"column"} gap="5px">
-          <Text color={textPrimary} textAlign={"center"}>
-            POS Features
-          </Text>
+          <motion.div
+            variants={textVariant}
+            initial="initial"
+            whileInView={"animate"}
+          >
+            <Text color={textPrimary} textAlign={"center"}>
+              POS Features
+            </Text>
+          </motion.div>
           <Heading
             textAlign={"center"}
             fontWeight={"600"}

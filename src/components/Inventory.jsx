@@ -51,6 +51,7 @@ const Inventory = () => {
         <Heading
           fontSize={{ base: "36px", md: "42px", lg: "48px" }}
           fontWeight={"600"}
+          textAlign={"center"}
         >
           Our best inventory
         </Heading>

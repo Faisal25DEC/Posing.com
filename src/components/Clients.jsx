@@ -160,7 +160,7 @@ const Clients = () => {
                 alignItems={"center"}
                 rounded={"10px"}
               >
-                <Image src={item.icon} />
+                <Image src={item.icon} w="70%" h="70%" />
               </Flex>
             </SwiperSlide>
           ))}
